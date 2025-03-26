@@ -8,24 +8,48 @@ on:
     branches: [ $default-branch ]
   workflow_dispatch:
     inputs:
-      name:
+      platform_to_build:
         type: choice
-        description: Who to greet
+        description: Build for plaform
         options: 
-        - monalisa
-        - cschleiden
-      message:
+          - Windows
+          - macOS
+          - Linux
         required: true
-      use-emoji:
+      draft_release:
         type: boolean
-        description: Include 🎉🤣 emojis
-      environment:
-        type: environment
+        description: Upload as a draft release
+        required: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-windows:
+    runs-on: windows-latest
+    if: github.event.inputs.platform_to_build == 'Windows'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+  build-macos:
+    runs-on: macos-latest
+    if: github.event.inputs.platform_to_build == 'macOS'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+  build-linux:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.platform_to_build == 'Linux'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+  draft-release:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.draft_release == 'True'
+    needs:
+      - build-windows
+      - build-linux
+      - build-macos
+    steps:
+      - name: Placeholder
+        run: "I'm ready to submit a draft release!"
