@@ -1,11 +1,6 @@
-name: Build application
-
+name: Manually build application
 
 on:
-  # push:
-  #   branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
   workflow_dispatch:
     inputs:
       app_name:
