@@ -14,3 +14,5 @@ The title for your PR should include one of these prefixes:
 - `[FEAT]` - Feature additions
 
 For example: `[BUG] I squished this bug!` or `[FEAT] Look at this new feature!`
+
+### Issues

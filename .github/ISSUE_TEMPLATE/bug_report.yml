@@ -51,7 +51,7 @@ body:
     id: contrib-guidelines
     attributes:
       label: Contribution guidelines
-      description: By submitting this issue, you agree to follow our <a href="" target="_blank">contributor's guidelines</a>. 
+      description: By submitting this issue, you agree to follow our <a href="/docs/Contributor's Guidelines.md#issues" target="_blank">contributor's guidelines</a>. 
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
