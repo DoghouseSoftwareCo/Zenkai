@@ -25,5 +25,4 @@ go.work.sum
 .env
 
 # Documentation files (uncomment when finished)
-docs/
 .github/PULL_REQUEST_TEMPLATE.md
