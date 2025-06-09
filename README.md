@@ -8,15 +8,15 @@
 - [ ] Windows
 - [ ] macOS
 - [ ] Linux
-- [ ] Docker
+- [ ] Docker (Web-based)
 
 ### Media management
-- [ ] Ability to connect to Jellyfin instances to provide an alternate UI for editing metadata
-- [ ] Ability to index anime, TV shows, movies, music and music videos
+- [ ] Ability to connect to Jellyfin instances to provide an alternate UI for editing metadata, as well as providing local (to the host machine) media editing
+- [ ] Ability to index TV shows, movies, music and music videos
 - [ ] Retrieve images for items (cover art, banner art, character art, etc.)
 - [ ] Export metadata to external files for use in media centre software (Kodi and the like)
-- [ ] View file information and add the ability to convert files to different containers and formats (will require integration with FFmpeg)
-- [ ] Templating support?
+- [ ] View file information and add the ability to convert files to different containers and formats (will require integration with FFmpeg and/or HandBrake)
+- [ ] Templating support? (not sure how that would work)
 
 ### Metadata providers
 - [ ] AniList
